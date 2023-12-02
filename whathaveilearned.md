@@ -29,3 +29,21 @@
   - Client side navigation
   - Prefetching the code of the Link page => page transition near-instant
   - `usePathname()` returns the path absolute to the root (e.g. `/dashboard/invoices`)
+
+- `@vercel/postgres`
+  - dashboard => storage => postgres
+  - storage => .env.local => show secret => copy snippet
+  - Browse data in `Data` section in `storage` tab and we can execute sql statements by running query in `Query` tab
+  - Protect against SQL injections
+  - await sql`sql query here`
+
+- Fetching data
+  - We can skip creating the API to fetch data by using react server component
+
+- React Server Component
+  - Execute on the server => make database queries directly
+  - can use `async/await` on component
+
+- Request waterfall issue:
+  - fix: parallel data fetching (`promise.all` or `promise.allSettled`)
+- Statis rendering issue:
