@@ -46,4 +46,16 @@
 
 - Request waterfall issue:
   - fix: parallel data fetching (`promise.all` or `promise.allSettled`)
-- Statis rendering issue:
+- Static rendering issue:
+
+- Static rendering:
+  - Faster websites: cache & globally distributed (maybe through CDN)
+  - Reduced server load: No need to dynamically generate content for each user request
+  - SEO: content is available when page loads
+
+- Dynamic Rendering:
+  - content is rendered on the server for each request
+  - real-time data
+  - user-specific content: dashboards or user profiles
+  - request time information: information can only be known at request time (cookies, URL search params)
+  - Cons: as fast as your slowest data fetch
