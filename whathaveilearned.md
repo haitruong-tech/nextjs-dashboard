@@ -83,3 +83,15 @@
   - Parallelize data fetching with JavaScript
   - Implement Streaming to prevent slow data requests from blocking the page, allow user to start interacting with the UI without waiting for everying to load
   - Move data fetching down to components that need it, use Suspense to mark static and dynamic sections in preparation for Partial Prerendering
+
+- New Search pattern: Implement search by using URL search params as state:
+  - Bookmarkable and Shareable URLs
+  - Server-Side Rendering & Initial Load
+  - Analytics and Tracking
+
+- `useSearchParams`: Get query params
+- `usePathname`
+- `useRouter`: navigation methods
+- "use client" directive
+- Debouncing Revisit:
+  - Reduce number of requests sent to your server & database
