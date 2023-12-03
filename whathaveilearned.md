@@ -71,3 +71,15 @@
 - Route Groups
   - route groups can ensure `loading.tsx` only applies to the `page.tsx` only
   - can use to separate application into sections `(marketing)`, or by teams
+
+- Partial Prerendering
+  - Static parts are prerendered at build time or during revalidation
+  - Dynamic parts are postponed until the user requests the route
+
+- Optimization
+  - Server and database in the same region => reduce latency between server and database
+  - Fetch data on server with RSC => expensive data fetches and logic on server => reduces client-side js bundle + prevent leaking database secrets
+  - SQL fetch only needed data, reducing the amount of data transferred for each request & js needed to transform data-in-memory
+  - Parallelize data fetching with JavaScript
+  - Implement Streaming to prevent slow data requests from blocking the page, allow user to start interacting with the UI without waiting for everying to load
+  - Move data fetching down to components that need it, use Suspense to mark static and dynamic sections in preparation for Partial Prerendering
