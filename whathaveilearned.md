@@ -116,3 +116,15 @@ async function create(formData: FormData) {
   - What does `revalidatePath` do? Maybe revalidate immediately, but isn't `unstable_noStore` enough? [Need more research](https://nextjs.org/learn/dashboard-app/mutating-data#6-revalidate-and-redirect)
 
 - Basic zod
+
+- Error handling
+- `redirect` from `next/navigation` is an error
+- `error.tsx` must be a client component
+  - `error`, `reset` props
+  - `notFound` from `next/navigation` will throw not found, can catch this by `not-found.tsx`
+- read more:
+  - [1](https://nextjs.org/docs/app/building-your-application/routing/error-handling), [2](https://nextjs.org/docs/app/api-reference/file-conventions/error), [3](https://nextjs.org/docs/app/api-reference/functions/not-found), [4](https://nextjs.org/docs/app/api-reference/file-conventions/not-found)
+
+- `useFormState` from `react-dom`
+  - args: (action, initialState)
+  - returns: [state, dispatch]
