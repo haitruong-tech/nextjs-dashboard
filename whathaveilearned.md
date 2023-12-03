@@ -95,3 +95,24 @@
 - "use client" directive
 - Debouncing Revisit:
   - Reduce number of requests sent to your server & database
+- we can access `searchParams`, `params` prop in the page components
+
+- React Server Action in Nextjs
+  - work even if JavaScript is disabled on the client (progressive enhancement)
+  - Learn more here: [security with server actions](https://nextjs.org/blog/security-nextjs-server-components-actions)
+```ts
+async function create(formData: FormData) {
+  'use server';
+
+  // Logic to mutate data...
+}
+
+// in jsx
+// <form action={create}>...</form>;
+```
+
+- Revalidate & Redirect
+  - Client-side Router Cache: stores the route segments in the user's browser for a time
+  - What does `revalidatePath` do? Maybe revalidate immediately, but isn't `unstable_noStore` enough? [Need more research](https://nextjs.org/learn/dashboard-app/mutating-data#6-revalidate-and-redirect)
+
+- Basic zod
