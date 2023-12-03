@@ -54,8 +54,20 @@
   - SEO: content is available when page loads
 
 - Dynamic Rendering:
+  - enabled by unstable_noStore from `next/cache`
   - content is rendered on the server for each request
   - real-time data
   - user-specific content: dashboards or user profiles
   - request time information: information can only be known at request time (cookies, URL search params)
-  - Cons: as fast as your slowest data fetch
+  - Cons: Fastest rendering is as fast as your slowest data fetch
+
+- Streaming
+  - Prevent slow data requests from blocking your whole page
+  - Each component is considered a chunk, chunks are rendered in parallel, reducing the overall load time
+  - two ways to implement streaming:
+    - At page level, with `loading.tsx`
+    - For specific components, with `<Suspense />`
+
+- Route Groups
+  - route groups can ensure `loading.tsx` only applies to the `page.tsx` only
+  - can use to separate application into sections `(marketing)`, or by teams
