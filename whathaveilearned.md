@@ -140,3 +140,9 @@ async function create(formData: FormData) {
   - Can we move `auth.ts` to api routes to holds other providers? And import it to provide sign in with username and password?
   - Email: user@nextmail.com
   - Password: 123456
+
+- Metadata
+  - Title
+  - Description
+  - Keyword
+  - Open graph metadata

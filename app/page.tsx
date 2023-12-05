@@ -3,6 +3,11 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { lusitana } from '@/app/ui/fonts';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Dashboard',
+};
 
 export default function Page() {
   return (
@@ -16,7 +21,8 @@ export default function Page() {
           <p
             className={`text-xl text-gray-800 md:text-3xl md:leading-normal ${lusitana.className}`}
           >
-            <strong>Welcome to Acme.</strong> This is the example for learning NextJS.
+            <strong>Welcome to Acme.</strong> This is the example for learning
+            NextJS.
           </p>
           <Link
             href="/login"
@@ -38,7 +44,7 @@ export default function Page() {
             src="/hero-mobile.png"
             width={560}
             height={620}
-            className="md:hidden block"
+            className="block md:hidden"
             alt="Screenshots of the dashboard project showing mobile version"
           />
         </div>
