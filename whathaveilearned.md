@@ -128,3 +128,15 @@ async function create(formData: FormData) {
 - `useFormState` from `react-dom`
   - args: (action, initialState)
   - returns: [state, dispatch]
+  - Learn more about accessibility: [web.dev course](https://web.dev/learn/accessibility/)
+
+- Revisit authentication & authorization:
+  - Authentication: identify who
+  - Authorization: give permissions to parts of the application
+
+- NextAuth
+  - `auth.config.js` and `auth.ts`
+  - NextJS Middleware
+  - Can we move `auth.ts` to api routes to holds other providers? And import it to provide sign in with username and password?
+  - Email: user@nextmail.com
+  - Password: 123456
